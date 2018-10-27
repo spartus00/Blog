@@ -1,14 +1,23 @@
 <!DOCTYPE html> 
 <html>
 <head>
-    <title>
-
-    </title>
+        {% if title %}
+            <title> Blog - {{ title }} </title>
+        {% else %}
+            <title>Matt's Blog</title>
+        {% endif %}
+    
 </head>
 <body>
-    <h1>These are all of my travel videos</h1>
+    {% for country in countries %}
+        <h1>Places visited</h1>
+        <p>These are the places visited in Indonesia: {{ country.Indonesia }} </p>
+    {% endfor %}
+
 </body>
 </html>
+
+
 
 
 <iframe width="560" height="315"
