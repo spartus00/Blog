@@ -1,25 +1,15 @@
-<!DOCTYPE html> 
-<html>
-<head>
-        {% if title %}
-            <title> Blog - {{ title }} </title>
-        {% else %}
-            <title>Matt's Blog</title>
-        {% endif %}
-    
-</head>
-<body>
-    {% for country in countries %}
+
+<title>Travel Blog</title>
+{% extends "travel/base.html" %}
+{% block content  %}
+   
+   {% for country in countries %}
         <h1>Places visited</h1>
         <p>These are the places visited in Indonesia: {{ country.Indonesia }} </p>
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/JdhXYJZ9a-E"
+            frameborder="4" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     {% endfor %}
-
-</body>
-</html>
+{% endblock content  %}
 
 
-
-
-<iframe width="560" height="315"
-    src="https://www.youtube.com/embed/JdhXYJZ9a-E"
-    frameborder="4" allow="autoplay; encrypted-media" allowfullscreen></iframe>
